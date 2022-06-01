@@ -13,7 +13,7 @@ const MockFollowersList = () => {
 describe("FollowersList", () => {
   it("should render same text pased into title prop", async () => {
     render(<MockFollowersList />);
-    const followerDivElement = await screen.findAllByTestId(/follower-item/i);
-    expect(followerDivElement.length).toBe(5);
+    const followerDivElement = await screen.findByTestId("follower-item-0");
+    expect(followerDivElement).toBeInTheDocument();
   });
 });
